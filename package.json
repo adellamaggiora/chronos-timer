@@ -1,6 +1,6 @@
 {
   "name": "chronos-timer",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Accurate and easy to use timer / countdown",
   "main": "lib/index.js",
   "types": "lib",
@@ -21,5 +21,9 @@
   "license": "MIT",
   "dependencies": {
     "rxjs": "^7.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keysersoze24/chronos-timer"
   }
 }
