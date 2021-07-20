@@ -1,7 +1,7 @@
 {
   "name": "chronos-timer",
   "version": "1.0.0",
-  "description": "Simple and precise timer / countdown",
+  "description": "Accurate and easy to use timer / countdown",
   "main": "lib/index.js",
   "types": "lib",
   "scripts": {
