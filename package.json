@@ -1,0 +1,25 @@
+{
+  "name": "chronos-timer",
+  "version": "1.0.0",
+  "description": "Simple and precise timer / countdown",
+  "main": "lib/index.js",
+  "types": "lib",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "keywords": [
+    "timer",
+    "countdown",
+    "chrono",
+    "chronos",
+    "time",
+    "stopwatch",
+    "watch",
+    "precision"
+  ],
+  "author": "KeyserSoze24",
+  "license": "MIT",
+  "dependencies": {
+    "rxjs": "^7.2.0"
+  }
+}
