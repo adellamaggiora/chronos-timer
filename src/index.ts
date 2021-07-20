@@ -25,9 +25,8 @@ export class Chronos {
     this._subscription = engine$.subscribe({
       next: res => {
         if (res >= this._milliseconds) {
-          this._currentCount$.next(-1)
           this.pause()
-          this.reset()
+          this._currentCount$.next(-1)
         }
         else {
           this._currentCount$.next(res)
