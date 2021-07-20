@@ -46,7 +46,7 @@ export class Chronos {
     let oldCnt = 0
     let startTime = 0
 
-    const refreshTime = 11
+    const refreshTime = 10
     const source$ = interval(refreshTime)
 
     const obs$ = pauser$.pipe(
