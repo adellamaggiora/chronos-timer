@@ -1,7 +1,7 @@
 # chronos-timer
 
 <p align="center">
-  <img src="assets/chronos-god.jpg">
+  <img src="https://cdna.artstation.com/p/assets/images/images/011/647/886/large/joseph-maureira-chronos-by-cicros-dcg5olz.jpg?1616533747">
 </p>
 
 ### Accurate and easy to use timer / countdown
