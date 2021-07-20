@@ -24,12 +24,10 @@ export class Chronos {
     let engine$ = this.timerEngine(this._pauser$)
     this._subscription = engine$.subscribe({
       next: res => {
+        this._currentCount$.next(res)
         if (res >= this._milliseconds) {
           this.pause()
           this._currentCount$.next(-1)
-        }
-        else {
-          this._currentCount$.next(res)
         }
       },
       error: err => {
