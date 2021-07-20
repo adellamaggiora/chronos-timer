@@ -25,7 +25,7 @@
 * `chronos.start()` <span style="color: forestgreen"> <*void*> </span>
 * `chronos.pause()` <span style="color: forestgreen"> <*void*> </span>
 * `chronos.reset()` <span style="color: forestgreen"> <*void*> </span>
-* `chronos.getCount()` <span style="color: forestgreen"> <*Observable*<*number*>>  </span> Milliseconds elapsed since `chronos.start()`, emits **-1** when countdown complete.
-* `chronos.getCountSync()` <span style="color: forestgreen"> <*number*> </span> Milliseconds elapsed since `chronos.start()`.
+* `chronos.getCents()` <span style="color: forestgreen"> <*Observable*<*number*>>  </span> Centiseconds elapsed since `chronos.start()`, emits **-1** when countdown complete.
+* `chronos.getCentsSync()` <span style="color: forestgreen"> <*number*> </span> Centiseconds elapsed since `chronos.start()`.
 
 

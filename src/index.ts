@@ -3,7 +3,7 @@ import { map, share, switchMap } from "rxjs/operators";
 
 export class Chronos {
 
-  private _currentCount$ = new BehaviorSubject(0)
+  private _cents$ = new BehaviorSubject(-1)
   private _pauser$ = new BehaviorSubject(true)
   private _subscription: Subscription
 
@@ -23,11 +23,12 @@ export class Chronos {
   private startSubscription(): void {
     let engine$ = this.timerEngine(this._pauser$)
     this._subscription = engine$.subscribe({
-      next: res => {
-        this._currentCount$.next(res)
-        if (res >= this._milliseconds) {
+      next: millis => {
+        const cents = Math.round(millis / 10)
+        this._cents$.next(cents)
+        if (millis >= this._milliseconds) {
           this.pause()
-          this._currentCount$.next(-1)
+          this._cents$.next(-1)
         }
       },
       error: err => {
@@ -86,7 +87,7 @@ export class Chronos {
 
   reset(): void {
     this._subscription.unsubscribe()
-    this._currentCount$.next(0)
+    this._cents$.next(0)
     this.startSubscription()
   }
 
@@ -94,12 +95,12 @@ export class Chronos {
     this._pauser$.next(true)
   }
 
-  getCount(): Observable<number> {
-    return this._currentCount$.asObservable().pipe(share())
+  getCents(): Observable<number> {
+    return this._cents$.asObservable().pipe(share())
   }
 
-  getCountSync(): number {
-    return this._currentCount$.getValue()
+  getCentsSync(): number {
+    return this._cents$.getValue()
   }
 
   //#endregion
