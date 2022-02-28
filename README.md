@@ -10,7 +10,7 @@
 
 #### Installation
 
-`npm i chronos timer`
+`npm i chronos-timer`
 
 
 #### Usage
